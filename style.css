@@ -1,0 +1,45 @@
+ * {
+     padding: 0%;
+     margin: 0px;
+     box-sizing: border-box;
+     font-size: 'popin', sans-serif;
+ }
+ 
+ body {
+     background-color: #1f242d;
+ }
+ 
+ .header {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     padding: 20px 10%;
+     background: transparent;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     z-index: 100;
+ }
+ 
+ .logo {
+     font-size: 25px;
+     font-weight: 500;
+     color: #fff;
+     cursor: default;
+     text-decoration: none;
+ }
+ 
+ .navbar a {
+     font-size: 18px;
+     color: white;
+     text-decoration: none;
+     font-weight: 500;
+     margin-left: 35px;
+     transition: .3s;
+ }
+ 
+ .navbar a:hover,
+ .navbar a.active {
+     color: coral;
+ }
