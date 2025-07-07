@@ -181,6 +181,90 @@
       .about-flex { flex-direction: column; align-items: center; gap: 24px; }
       .about-pic { margin-bottom: 0; }
     }
+    .contact-form {
+      display: flex;
+      gap: 32px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+      padding: 32px 24px;
+      max-width: 900px;
+      margin: 0 auto;
+      justify-content: center;
+    }
+    .contact-form-left {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      flex: 1;
+    }
+    .contact-form-right {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+    }
+    .contact-form input, .contact-form textarea {
+      padding: 14px 16px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      font-size: 1rem;
+      background: #f8fafc;
+      color: #22223b;
+      outline: none;
+      resize: none;
+      margin-bottom: 0;
+    }
+    .contact-form textarea {
+      min-height: 110px;
+      max-width: 100%;
+    }
+    .contact-submit {
+      background: #ff2d55;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 14px 38px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: background 0.2s, color 0.2s;
+      margin-top: 18px;
+    }
+    .contact-submit:hover {
+      background: #22223b;
+      color: #ff2d55;
+    }
+    .contact-info-cards {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      margin-top: 36px;
+      flex-wrap: wrap;
+    }
+    .contact-info-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      padding: 18px 28px;
+      font-size: 1rem;
+      color: #22223b;
+      min-width: 220px;
+    }
+    .contact-info-card i {
+      font-size: 1.6rem;
+      color: #ff2d55;
+      min-width: 32px;
+      text-align: center;
+    }
+    @media (max-width: 900px) {
+      .contact-form { flex-direction: column; gap: 18px; }
+      .contact-form-right { width: 100%; }
+      .contact-info-cards { gap: 18px; }
+    }
   </style>
 </head>
 <body>
@@ -196,6 +280,7 @@
   </div>
 
   <section class="hero" id="home">
+    <img src="bura1.jpg" alt="Profile Photo" class="about-pic">
     <h1>Hi, I'm Biruk <span class="highlight">Dereje</span></h1>
     <p>A Junior Software Engineer passionate about building beautiful and efficient web apps.</p>
     <div class="social-icons">
@@ -231,13 +316,13 @@
         <h3>Sales Report Automation</h3>
         <p>Python script to automate Excel-based sales reports for small businesses.</p>
         <p><strong>Tech Stack:</strong> Python, Pandas, OpenPyXL</p>
-        <a href="#">GitHub</a>
+        <a href="https://github.com/Biruk-Dereje">GitHub</a>
       </div>
       <div class="project">
         <h3>Task Manager</h3>
         <p>A full-stack app to manage tasks with authentication and dashboard.</p>
         <p><strong>Tech Stack:</strong> React, Node.js, MongoDB</p>
-        <a href="#">GitHub</a>
+        <a href="https://github.com/Biruk-Dereje">GitHub</a>
       </div>
     </div>
   </section>
@@ -259,10 +344,40 @@
   </section>
 
   <section class="section" id="contact">
-    <h2 class="section-title">Contact</h2>
-    <p>Email: <a href="mailto:derejebiruk1@gmail.com">derejebiruk1@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/Biruk-Dereje">github.com/Biruk-Dereje</a></p>
-    <p>LinkedIn: <a href="#">(Add your LinkedIn link here)</a></p>
+    <div style="text-align:center; margin-bottom: 32px;">
+      <h3 style="font-size:1.2rem; font-weight:600; margin-bottom:8px; color:#22223b;">Have Question?</h3>
+      <h2 class="section-title" style="margin-bottom:0;">Contact Me Now</h2>
+    </div>
+    <form class="contact-form">
+      <div class="contact-form-left">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="text" placeholder="Your Phone">
+      </div>
+      <div class="contact-form-right">
+        <textarea placeholder="Your Message" required></textarea>
+      </div>
+    </form>
+    <div style="text-align:center; margin-top:24px;">
+      <button class="contact-submit" type="submit">SUBMIT FORM</button>
+    </div>
+    <div class="contact-info-cards">
+      <div class="contact-info-card">
+        <i class="fab fa-whatsapp"></i>
+        <div>
+          <div>+251-973397481</div>
+          <div>+251-712997481</div>
+        </div>
+      </div>
+      <div class="contact-info-card">
+        <i class="fas fa-map-marker-alt"></i>
+        <div>Kenteri steet Addis Abeba City ,<br>Ethiopia</div>
+      </div>
+      <div class="contact-info-card">
+        <i class="fas fa-envelope"></i>
+        <div>support@domain.com<br>info@email.com</div>
+      </div>
+    </div>
   </section>
 
   <footer>
