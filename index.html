@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biruk Dereje | Junior Software Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">  
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">Portfolio</div>
+    <nav>
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="darkModeToggle" title="Toggle dark mode" style="background:none;border:none;cursor:pointer;font-size:1.4rem;margin-left:18px;"><i class="fas fa-moon"></i></button>
+  </div>
+
+  <section class="hero" id="home">
+    <img src="Images/bura1.jpg" alt="Profile Photo" class="about-pic">
+    <h1>Hi, I'm Biruk <span class="highlight">Dereje</span></h1>
+    <p>A Junior Software Engineer passionate about building beautiful and efficient web apps.</p>
+    <div class="social-icons">
+      <a href="mailto:derejebiruk1@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://github.com/Biruk-Dereje" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="cta-buttons">
+      <a href="#projects">View Projects</a>
+      <a href="#contact">Contact Me</a>
+      <a href="resume.pdf" download>Download Resume</a>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <h2 class="section-title">Who I Am?</h2>
+    <div class="about-flex">
+      <img src="Images/bura1.jpg" alt="Profile Photo" class="about-pic">
+      <p>I am a recent graduate in Software Engineering from Adama Science and Technology University. I enjoy building tools that make people's lives easier and solving problems with clean, maintainable code. I'm currently learning more about backend APIs and advanced frontend frameworks.</p>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>A personal portfolio built with HTML/CSS showcasing my skills and projects.</p>
+        <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
+        <a href="#">Live Demo</a> | <a href="#">GitHub</a>
+      </div>
+  
+      <div class="project">
+        <h3>Task Manager</h3>
+        <p>This was my final year project at Adama Science and Technology University. The app allows users to manage tasks efficiently with features like authentication, dashboards, and CRUD operations. I led the backend development and contributed to frontend integration.</p>
+        <p><strong>Tech Stack:</strong> MongoDB, Express.js, React.js, Node.js</p>
+        <a href="https://github.com/Biruk-Dereje">GitHub</a>
+      </div>
+  
+      <div class="project">
+        <h3>Entrepreneur and Investor Connection Platform</h3>
+        <p>A real-world platform developed during my internship at Kuraz Technologies. This app connects entrepreneurs with potential investors. I contributed as a backend developer, focusing on building secure REST APIs, authentication, and user role management.</p>
+        <p><strong>Tech Stack:</strong> Node.js, Express.js, MongoDB, JWT, Postman, Git</p>
+        <a href="https://github.com/Project-Kuraz-Group-8/E-and-I-Backend" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <h2 class="section-title">Skills & Tech Stack</h2>
+    <div class="skills">
+      <div class="skill">JavaScript</div>
+      <div class="skill">Python</div>
+      <div class="skill">React.js</div>
+      <div class="skill">Node.js</div>
+      <div class="skill">Express.js</div>
+      <div class="skill">MongoDB</div>
+      <div class="skill">Django</div>
+      <div class="skill">Git & GitHub</div>
+      <div class="skill">Postman</div>
+      <div class="skill">Figma</div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div style="text-align:center; margin-bottom: 32px;">
+      <h3 style="font-size:1.2rem; font-weight:600; margin-bottom:8px; color:#22223b;">Have Question?</h3>
+      <h2 class="section-title" style="margin-bottom:0;">Contact Me Now</h2>
+    </div>
+    <form class="contact-form">
+      <div class="contact-form-left">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="text" placeholder="Your Phone">
+      </div>
+      <div class="contact-form-right">
+        <textarea placeholder="Your Message" required></textarea>
+      </div>
+      <div style="text-align:center; margin-top:24px;">
+        <button class="contact-submit" type="submit">SUBMIT FORM</button>
+      </div>
+    </form>
+    <div class="contact-info-cards">
+      <div class="contact-info-card">
+        <i class="fab fa-whatsapp"></i>
+        <div>
+          <div>+251-973397481</div>
+          <div>+251-712997481</div>
+        </div>
+      </div>
+      <div class="contact-info-card">
+        <i class="fas fa-map-marker-alt"></i>
+        <div>Lideta Addis Ababa City ,<br>Ethiopia</div>
+        
+      </div>
+      <div class="contact-info-card">
+        <i class="fas fa-envelope"></i>
+        <div>support@domain.com<br>info@email.com</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Biruk Dereje. All rights reserved.</p>
+  </footer>
+  <script>
+    // Dark mode toggle logic
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedMode = localStorage.getItem('darkMode');
+    if (savedMode === 'enabled' || (!savedMode && prefersDark)) {
+      document.body.classList.add('dark-mode');
+      darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    }
+    darkModeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      const enabled = document.body.classList.contains('dark-mode');
+      localStorage.setItem('darkMode', enabled ? 'enabled' : 'disabled');
+      darkModeToggle.innerHTML = enabled ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+    });
+  </script>
+</body>
+</html>
